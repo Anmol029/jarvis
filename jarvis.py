@@ -54,16 +54,16 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('anmolbhatti025@gmail.com','FAMILYONE')
-    server.sendmail('anmolbhatti0252gmail.com',to, content)
+    server.login('Enter your email','your password')
+    server.sendmail('Enter your email',to, content)
     server.close()
 
 
 if __name__ == "__main__":
-    #speak("Anmol is a developer")
+    
     wishMe()
     while True:
-    #if 1:
+    
         query = takeCommand().lower()
         
         #Logic for executing tasks based on query
@@ -95,11 +95,11 @@ if __name__ == "__main__":
             codePath = "D:\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
 
-        elif 'email to moti' in query:
+        elif 'email to someone' in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "ankitabhatti08@gmail.com"
+                to = "write gmail id of the person you want to send the email"
                 sendEmail(to, content)
                 speak("Email has been sent!")
 
